@@ -56,7 +56,7 @@ input[type="text"]{
 button{
     display: block;
     margin-top: 10px;
-    width: 80%;
+    width: 200px;
     height: 30px;
     background-color: #1c8af9;
     color: white;

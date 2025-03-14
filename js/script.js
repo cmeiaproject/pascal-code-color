@@ -52,6 +52,11 @@ function btnConfirmarHexClick(e)
 
 function btnConfirmarRGBClick(e)
 {
+
+    edtCorAzul.value = edtCorAzul.value.trim() === '' ? '00' : edtCorAzul.value.trim();
+    edtCorVerde.value = edtCorVerde.value.trim() === '' ? '00' : edtCorVerde.value.trim();
+    edtCorVermelho.value = edtCorVermelho.value.trim() === '' ? '00' : edtCorVermelho.value.trim();        
+
     let corVermelho = parseInt(edtCorVermelho.value).toString(16).toUpperCase();
     let corVerde = parseInt(edtCorVerde.value).toString(16).toUpperCase();
     let corAzul = parseInt(edtCorAzul.value).toString(16).toUpperCase();
@@ -60,6 +65,10 @@ function btnConfirmarRGBClick(e)
 
     divRegionRGB.style.backgroundColor = `${cor}`;
     divRegionRGB.innerHTML = `<p style="color:white">${cor}</p>`;
+
+    corAzul = '0'.repeat(2 - corAzul.length) +corAzul;
+    corVerde = '0'.repeat(2 - corVerde.length) +corVerde;
+    corVermelho = '0'.repeat(2 - corVermelho.length) +corVermelho;
 
     pHexPascalCodeRegionRGB.innerHTML = '$00' + corAzul + corVerde + corVermelho;
     pHexHtmlCode.innerHTML = '#' + corVermelho + corVerde + corAzul;
