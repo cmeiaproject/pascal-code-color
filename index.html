@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal HexCode Color</title>
+    <link href="css/style.css" rel="stylesheet"/>    
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cor em hexadecimal para Pascal</h1>
+    </header>
+    <main>
+        <section id="sectionContainer">
+            <section id="sectionHex">
+                <h3>Código em hexadecimal no html</h3>
+                <div>
+                    <input type="text" id="edtCor"/>
+                </div>
+                <div>
+                    <button id="btnConfirmarHex">Confirmar</button>
+                </div>
+                <div class="region">
+                    <div id="divRegionHex" class="region"></div>                
+                </div>
+                <p id="pRgbCodeValueToHtmlRegionHex" class="display"></p>
+                <p id="pHtmlHexValueToPascalRegionHex" class="display"></p>
+            </section>
+            <section id="sectionRGB">
+                <h3>Código RGB no html</h3>
+                <div class="divFlex">
+                    <div>
+                        <span class="color red"></span><input type="text" id="edtCorVermelho" min="0" max="255"/>
+                    </div>    
+                    <div>
+                      <span class="color green"></span><input type="text" id="edtCorVerde" min="0" max="255"/>
+                    </div>    
+                    <div>
+                        <span class="color blue"></span><input type="text" id="edtCorAzul" min="0" max="255"/>
+                    </div>    
+                </div>
+                <div>
+                    <button id="btnConfirmarRGB">Confirmar</button>
+                </div>
+                <div class="region">
+                    <div id="divRegionRGB"></div>                
+                </div>
+                <p id="pHtmlHexValueToHtmlRegionRGB" class="display"></p>
+                <p id="pHtmlHexValueToPascalRegionRGB" class="display"></p>
+            </section>
+        </section>
+        <section id="sectionMention">
+            <h3>Nota</h3>
+            <p>O valor hexadecimal da cor identificado no html segue a ordem RGB (Red, Green, Blue).</p>
+            <p>Já no Pascal, o valor hexadecimal da cor é invertido, seguindo a ordem (Blue, Green, Red).</p>            
+            <p>Os dois primeiros digitos no Pascal, identificam o nivel de transparência que a cor receberá.<br>Este valor vai de 00 (transparente) a FF (totalmente opcao).</p>
+            <p>Exemplo<br>Valor em hexadecimal da cor em html: #247BA0<br>Valor em hexadecimal da cor em pascal: $00A07B24</p>
+        </section>
+    </main>
+    <footer>
+        <p>by Cmeia Project</p>
+    </footer>
+</body>
+</html>
